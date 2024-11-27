@@ -83,7 +83,7 @@ const AiExpertise = () => {
 
               {/* Enhanced LinkedIn Button */}
               <a
-                href="https://linkedin.com/in/your-profile"
+                href="https://linkedin.com/in/daniel-milad-7467731a4"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center space-x-2 sm:space-x-3 bg-gradient-to-r 

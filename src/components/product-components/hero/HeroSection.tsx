@@ -17,7 +17,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Sam",
     position: "SOCIAL MEDIA STRATEGIST",
-    photos: ["/assets/agent-headshots/2.jpg"],
+    photos: ["product/assets/agent-headshots/2.jpg"],
     stats: {
       "🏆 Engagement Rate": "⬆ 22%",
       "⚡ Daily Posts": "24",
@@ -29,7 +29,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Alex",
     position: "CUSTOMER ENGAGEMENT SPECIALIST",
-    photos: ["/assets/agent-headshots/1.jpg"],
+    photos: ["product/assets/agent-headshots/1.jpg"],
     stats: {
       "⏱️ Response Time": "30 secs",
       "😊 Satisfaction Rate": "98%",
@@ -42,7 +42,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Taylor",
     position: "KNOWLEDGE BASE MANAGER",
-    photos: ["/assets/agent-headshots/4.jpg"],
+    photos: ["product/assets/agent-headshots/4.jpg"],
     stats: {
       "✔️ Accuracy": "99.5%",
       "📚 Database Size": "10 TB",
@@ -54,7 +54,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Jordan",
     position: "PRODUCTIVITY COACH",
-    photos: ["/assets/agent-headshots/5.jpg"],
+    photos: ["product/assets/agent-headshots/5.jpg"],
     stats: {
       "⏱️ Time Saved": "40hrs/mo",
       "✅ Tasks Completed": "500+/week",
@@ -66,7 +66,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Casey",
     position: "WORKFLOW AUTOMATION EXPERT",
-    photos: ["/assets/agent-headshots/6.jpg"],
+    photos: ["product/assets/agent-headshots/6.jpg"],
     stats: {
       "🔄 Processes Automated": "100+",
       "⚡ Efficiency Boost": "+35%",
