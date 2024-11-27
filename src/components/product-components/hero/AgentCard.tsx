@@ -56,7 +56,7 @@ const AgentCard = ({ teamMembers, currentIndex }: AgentCardProps) => {
 
   return (
     <div className="w-[350px] animate-floating">
-      <div className="relative group pt-8">
+      <div className="relative group pt-8 font-robotoMono">
         {/* Pokemon-style Card with Cyber Theme */}
         <div className="relative rounded-[20px] overflow-hidden border-4 border-cyber-blue/30 shadow-[0_0_15px_rgba(66,220,255,0.3)] before:content-[''] before:absolute before:inset-0 before:rounded-[16px] before:border-2 before:border-cyber-blue/20 before:z-10">
           {/* Textured background using multiple layers */}
@@ -74,10 +74,10 @@ const AgentCard = ({ teamMembers, currentIndex }: AgentCardProps) => {
           <div className="relative p-4">
             {/* Header Section */}
             <div className="flex justify-between items-start mb-2">
-              <h3 className="text-2xl font-bold text-white">
+              <h3 className="text-2xl font-bold text-white font-body">
                 {currentMember?.name || "Unknown"}
               </h3>
-              <div className="text-cyber-blue font-bold">
+              <div className="text-cyber-blue font-bold font-body">
                 PWR {calculatePower()}
               </div>
             </div>
@@ -97,7 +97,7 @@ const AgentCard = ({ teamMembers, currentIndex }: AgentCardProps) => {
 
             {/* AI Agent Info */}
             <div className="text-sm text-cyber-blue mb-4 border-b border-cyber-blue/20 pb-2">
-              <span className="text-md font-semibold capitalize tracking-wider">
+              <span className="text-md font-semibold capitalize tracking-wider font-body">
                 {currentMember?.position || "Unknown"}
               </span>{" "}
               • <br />
@@ -113,21 +113,23 @@ const AgentCard = ({ teamMembers, currentIndex }: AgentCardProps) => {
                     className="bg-navy-900/50 backdrop-blur-sm rounded p-2 flex justify-between items-center border border-cyber-blue/10"
                   >
                     <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-full bg-cyber-blue/20 flex items-center justify-center text-cyber-blue">
+                      <div className="w-6 h-6 rounded-full bg-cyber-blue/20 flex items-center justify-center text-cyber-blue font-body">
                         {key.split(" ")[0]}
                       </div>
-                      <span className="text-white font-medium">
+                      <span className="text-white font-medium font-body">
                         {key.split(" ").slice(1).join(" ")}
                       </span>
                     </div>
-                    <span className="text-cyber-blue font-bold">{value}</span>
+                    <span className="text-cyber-blue font-bold font-body">
+                      {value}
+                    </span>
                   </div>
                 )
               )}
             </div>
 
             {/* Card Number */}
-            <div className="absolute bottom-2 right-4 text-cyber-blue/60 text-sm">
+            <div className="absolute bottom-2 right-4 text-cyber-blue/60 text-sm pb-3 font-body ">
               #{currentMember?.cardNumber || "000"}
             </div>
           </div>
