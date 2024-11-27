@@ -1,4 +1,4 @@
-import { poppins, iceland, robotoMono } from "./fonts/fonts";
+import { poppins, robotoMono } from "./fonts/fonts";
 import type { Metadata } from "next";
 import "./product.css";
 import Navbar from "@/components/product-components/Navbar";
