@@ -96,7 +96,7 @@ const SCROLL_CONFIG = {
   CARD_ROTATION_INTERVAL: 5000,
 } as const;
 
-const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
+const HeroSection: React.FC<HeroSectionProps> = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [typedWord, setTypedWord] = useState("");
