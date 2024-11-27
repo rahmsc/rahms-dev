@@ -13,7 +13,7 @@ const Testimonials = () => {
       role: "Founder",
       company: "HyperbaricHQ",
       rating: 5,
-      image: "/testimonial-photos/pete.jpg",
+      image: "/product/testimonial-photos/pete.jpg",
       linkedin: "https://www.linkedin.com/in/peter-frost-06a12317b/",
     },
     {
@@ -23,7 +23,7 @@ const Testimonials = () => {
       role: "CEO",
       company: "Temple Technology",
       rating: 5,
-      image: "/testimonial-photos/alex.jpg",
+      image: "/product/testimonial-photos/alex.jpg",
       linkedin: "https://www.linkedin.com/in/alexflamsteed/",
     },
     {
@@ -33,7 +33,7 @@ const Testimonials = () => {
       role: "Lead Researcher",
       company: "Emergence Benefactors",
       rating: 5,
-      image: "/testimonial-photos/hannah.jpg",
+      image: "/product/testimonial-photos/hannah.jpg",
       linkedin: "https://www.linkedin.com/in/hannah-biddell/",
     },
   ];

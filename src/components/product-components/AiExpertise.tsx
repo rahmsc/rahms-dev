@@ -52,7 +52,7 @@ const AiExpertise = () => {
                     rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-300"
                   />
                   <Image
-                    src="/testimonial-photos/dan.jpg"
+                    src="/product/testimonial-photos/dan.jpg"
                     alt="AI Expert Profile"
                     width={220}
                     height={220}
