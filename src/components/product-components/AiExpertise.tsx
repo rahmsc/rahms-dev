@@ -13,7 +13,7 @@ const AiExpertise = () => {
           <div className="space-y-3 sm:space-y-4">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight font-heading">
               Accelerate Growth with{" "}
-              <span className="bg-gradient-to-br from-cyber-blue to-cyber-blue/70 text-transparent bg-clip-text">
+              <span className="bg-gradient-to-br from-cyber-blue to-cyber-blue/70 text-transparent tracking-wider bg-clip-text">
                 SOLVR
               </span>
             </h2>

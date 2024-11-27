@@ -44,7 +44,7 @@ const TransformBusiness = () => {
             Why Choose{" "}
             <span
               className="bg-gradient-to-br from-cyber-blue to-cyber-blue/70 text-transparent bg-clip-text 
-              inline-block transform hover:scale-105 transition-transform duration-300"
+              inline-block transform hover:scale-105 transition-transform duration-300 tracking-wide"
             >
               SOLVR
             </span>
