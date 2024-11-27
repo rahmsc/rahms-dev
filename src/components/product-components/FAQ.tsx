@@ -60,6 +60,7 @@ const FAQ = () => {
         <div className="space-y-3 sm:space-y-4 max-w-3xl mx-auto">
           {faqs.map((faq, index) => (
             <div
+              // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
               key={index}
               className="bg-navy-800/50 rounded-xl border border-cyber-blue/20 
                 backdrop-blur-sm transition-all duration-300

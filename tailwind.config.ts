@@ -11,8 +11,14 @@ const config: Config = {
     extend: {
       fontFamily: {
         mono: ['"Source Code Pro"', "monospace"],
+        heading: ["var(--font-poppins)"],
+        body: ["var(--font-roboto-mono)"],
       },
       colors: {
+        "cyber-blue": "#00F0FF",
+        "dark-navy": "#0A0F1C",
+        "card-dark": "#0D1425",
+        "teal-dark": "#1A3038",
         green: {
           400: "#4ade80",
           600: "#16a34a",
@@ -76,6 +82,28 @@ const config: Config = {
           lg: "var(--radius)",
           md: "calc(var(--radius) - 2px)",
           sm: "calc(var(--radius) - 4px)",
+        },
+      },
+      animation: {
+        "border-travel": "border-travel 4s linear infinite",
+        "glow-pulse": "glow-pulse 4s ease-in-out infinite",
+        floating: "float 3s ease-in-out infinite",
+      },
+      keyframes: {
+        "border-travel": {
+          "0%, 100%": { backgroundPosition: "10% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
+        "glow-pulse": {
+          "0%, 100%": {
+            opacity: "0.8",
+            backgroundPosition: "center",
+          },
+          "50%": { opacity: "1" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-5px)" },
         },
       },
     },
