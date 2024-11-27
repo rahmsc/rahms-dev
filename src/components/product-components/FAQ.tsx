@@ -45,7 +45,7 @@ const FAQ = () => {
       <div className="max-w-7xl mx-auto">
         <h2
           className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center 
-          mb-8 sm:mb-10 lg:mb-12"
+          mb-8 sm:mb-10 lg:mb-12 font-heading"
         >
           Frequently Asked{" "}
           <span

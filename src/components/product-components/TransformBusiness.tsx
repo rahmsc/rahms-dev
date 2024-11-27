@@ -40,7 +40,7 @@ const TransformBusiness = () => {
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Enhanced Header */}
         <div className="text-center space-y-4 sm:space-y-6 mb-12 sm:mb-16 lg:mb-20">
-          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight font-heading">
             Why Choose{" "}
             <span
               className="bg-gradient-to-br from-cyber-blue to-cyber-blue/70 text-transparent bg-clip-text 
@@ -49,7 +49,7 @@ const TransformBusiness = () => {
               SOLVR
             </span>
           </h2>
-          <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto font-body">
             The Expertise You Need. The Results You Want.
           </p>
         </div>
@@ -80,14 +80,14 @@ const TransformBusiness = () => {
               <div className="space-y-3 sm:space-y-4">
                 <h3
                   className="text-xl sm:text-2xl font-bold text-white
-                    group-hover:text-cyber-blue transition-colors duration-300"
+                    group-hover:text-cyber-blue transition-colors duration-300 font-heading "
                 >
                   {solution.title}
                 </h3>
                 <h4
                   className="text-base sm:text-lg font-semibold 
                   bg-gradient-to-br from-cyber-blue to-cyber-blue/70 
-                  text-transparent bg-clip-text"
+                  text-transparent bg-clip-text font-heading"
                 >
                   {solution.subtitle}
                 </h4>

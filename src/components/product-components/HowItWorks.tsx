@@ -78,7 +78,7 @@ const HowItWorks = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyber-blue transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyber-blue transition-colors duration-300 font-heading">
                     {step.title}
                   </h3>
                   <p className="text-gray-400 font-mono leading-relaxed">

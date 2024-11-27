@@ -441,7 +441,7 @@ const BusinessPotential = () => {
         <div className="space-y-6 sm:space-y-8 lg:space-y-10 order-1 lg:order-2">
           <h2
             id="business-potential-title"
-            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight"
+            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight font-heading"
           >
             Integrating AI on Your
             <br />
@@ -459,7 +459,7 @@ const BusinessPotential = () => {
                 <span className="flex-shrink-0 flex items-center justify-center w-5 sm:w-6 h-5 sm:h-6 mt-1">
                   <Square className="w-4 sm:w-5 h-4 sm:h-5 text-gray-500" />
                 </span>
-                <span className="block text-gray-200 text-base sm:text-lg">
+                <span className="block text-gray-200 text-base sm:text-lg font-body">
                   {challenge}
                 </span>
               </li>
