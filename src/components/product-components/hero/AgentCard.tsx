@@ -129,9 +129,9 @@ const AgentCard = ({ teamMembers, currentIndex }: AgentCardProps) => {
             </div>
 
             {/* Card Number */}
-            <div className="absolute bottom-2 right-4 text-cyber-blue/60 text-sm pb-3 font-body ">
+            {/* <div className="absolute bottom-2 right-4 text-cyber-blue/60 text-sm pb-3 font-body ">
               #{currentMember?.cardNumber || "000"}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
