@@ -87,7 +87,7 @@ const TransformBusiness = () => {
                 <h4
                   className="text-base sm:text-lg font-semibold 
                   bg-gradient-to-br from-cyber-blue to-cyber-blue/70 
-                  text-transparent bg-clip-text font-heading"
+                  text-transparent bg-clip-text font-body"
                 >
                   {solution.subtitle}
                 </h4>

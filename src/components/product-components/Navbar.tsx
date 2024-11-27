@@ -49,7 +49,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 font-body">
             <Link
               href="#who"
               className="text-gray-300 hover:text-cyber-blue transition-colors"

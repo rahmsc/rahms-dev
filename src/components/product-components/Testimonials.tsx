@@ -62,7 +62,7 @@ const Testimonials = () => {
         {/* Enhanced Header */}
         <h2
           className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center 
-          mb-8 sm:mb-12 lg:mb-16"
+          mb-8 sm:mb-12 lg:mb-16 font-heading"
         >
           Client{" "}
           <span
