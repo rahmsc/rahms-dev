@@ -2,26 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --tarantino-yellow: #f7b91c;
+  --tarantino-red: #e50914;
+  --tarantino-black: #000000;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.tarantino-text {
+  font-family: "Anton", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-shadow: 3px 3px 0 var(--tarantino-red);
+}
+
+.grain {
+  position: fixed;
+  top: -150%;
+  left: -50%;
+  right: -50%;
+  bottom: -150%;
+  width: 200%;
+  height: 400%;
+  background: transparent
+    url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAGFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANgoa1AAAACHRSTlMoACBQcJDAn+8Fcg4AAACCSURBVDjLhcqxDQIxEEXBtxQgIqSkBAqgGhqgAQJqoAXK+BSWvRM/sr0RGCHs7HiZ6QQU5WXv3/l8vGXmcb4YxvlVNs7XA+P8OsH5Tc7OA+CcnLPzGDhnb+78CBrn/BE059R5CzrnnPOTGOfsnXPOzhvonXPOzlPonXPO3jvnP+WcnZ/Dufw9z9kDDeRNM1UAAAAASUVORK5CYII=")
+    repeat 0 0;
+  animation: grain 1s steps(10) infinite;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
   }
 }
