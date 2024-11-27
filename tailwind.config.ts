@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        mono: ['"Source Code Pro"', "monospace"],
+        // mono: ['"Source Code Pro"', "monospace"],
         heading: ["var(--font-poppins)"],
         body: ["var(--font-roboto-mono)"],
       },
