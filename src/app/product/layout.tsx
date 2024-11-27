@@ -16,10 +16,7 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html
-      lang="en"
-      className={`${poppins.variable} ${robotoMono.variable} ${iceland.className}`}
-    >
+    <html lang="en" className={`${poppins.variable} ${iceland.className}`}>
       <body className="font-body">
         <Navbar />
         {children}
