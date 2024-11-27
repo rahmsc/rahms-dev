@@ -1,6 +1,6 @@
 import { poppins, robotoMono, iceland } from "./fonts/fonts";
 import type { Metadata } from "next";
-import "./globals.css";
+import "./product.css";
 import Navbar from "@/components/product-components/Navbar";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { HotJar } from "@/components/product-components/Hotjar";
