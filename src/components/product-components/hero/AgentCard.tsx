@@ -96,7 +96,7 @@ const AgentCard = ({ teamMembers, currentIndex }: AgentCardProps) => {
             </div>
 
             {/* AI Agent Info */}
-            <div className="text-sm text-cyber-blue mb-4 border-b border-cyber-blue/20 pb-2">
+            <div className="text-sm text-cyber-blue mb-4 border-b border-cyber-blue/20 pb-2 font-body tracking-widest">
               <span className="text-md font-semibold capitalize tracking-wider font-body">
                 {currentMember?.position || "Unknown"}
               </span>{" "}
