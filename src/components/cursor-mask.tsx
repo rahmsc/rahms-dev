@@ -107,9 +107,12 @@ export default function MaskCursor() {
         }}
       >
         <p className="text-5xl md:text-7xl font-bold max-w-4xl text-center leading-relaxed text-black">
-          I&apos;m a <span className="text-[#ff4d4d]">product designer</span>{" "}
-          who likes to <span className="text-[#ff4d4d]">design</span> products
-          in the <br /> <span className="text-[#ff4d4d]">digital</span>
+          I&apos;m <span className="text-[#ff4d4d]">passionate</span> about{" "}
+          <br />
+          <span className="text-[#ff4d4d]">designing</span> and{" "}
+          <span className="text-[#ff4d4d]">building</span> creative{" "}
+          <span className="text-[#ff4d4d]">solutions</span> for the <br />{" "}
+          <span className="text-[#ff4d4d]">digital</span>
           <br /> space.
         </p>
         {/* Masked layer icons */}
