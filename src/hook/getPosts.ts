@@ -5,8 +5,12 @@ export async function getPosts() {
     _id,
     title,
     slug,
-    mainImage,
-    excerpt
+    publishedAt,
+    excerpt,
+    "tags": tags[]-> {
+      name,
+      "slug": slug.current
+    },
+    "image": mainImage.asset->url
   }`);
 }
-

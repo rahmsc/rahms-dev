@@ -5,7 +5,7 @@ export interface Post {
   _id: string;
   title: string;
   excerpt: string;
-  publishedAt: string | Date;
+  publishedAt: Date;
   // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   body: any[]; // You might want to type this more specifically based on your schema
   tags: Array<string | { name: string; slug: string | { current: string } }>;

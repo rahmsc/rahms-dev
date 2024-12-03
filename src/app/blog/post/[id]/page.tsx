@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import type { Tag } from "@/utils/Interface";
 interface PostPageProps {
   params: {
-    id: string;  // Changed from _id to id to match the folder structure
+    id: string; // Changed from _id to id to match the folder structure
   };
 }
 
@@ -69,8 +69,7 @@ export default async function PostPage({ params }: PostPageProps) {
       </div>
     );
   } catch (error) {
-    console.error('Error loading post:', error);
+    console.error("Error loading post:", error);
     notFound();
   }
 }
-

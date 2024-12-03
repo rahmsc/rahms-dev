@@ -4,12 +4,14 @@ import { ThemeProvider } from "@/components/blog-components/theme-provider";
 
 const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "700"],
   variable: "--font-source-code-pro",
 });
 
 export const metadata = {
-  title: "My Blog",
-  description: "A blog frontend for my CMS",
+  title: "Rahms' Blog",
+  description: "A blog from a web dev intern building out the new future",
 };
 
 export default function RootLayout({
