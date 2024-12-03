@@ -10,7 +10,6 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        // mono: ['"Source Code Pro"', "monospace"],
         heading: ["var(--font-poppins)"],
         body: ["var(--font-roboto-mono)"],
         sourceCodePro: ["var(--font-source-code-pro)"],
@@ -24,66 +23,51 @@ const config: Config = {
           400: "#4ade80",
           600: "#16a34a",
         },
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        chart: {
+          "1": "hsl(var(--chart-1))",
+          "2": "hsl(var(--chart-2))",
+          "3": "hsl(var(--chart-3))",
+          "4": "hsl(var(--chart-4))",
+          "5": "hsl(var(--chart-5))",
+        },
       },
-      typography: {
-        DEFAULT: {
-          css: {
-            color: "#4ade80",
-            a: {
-              color: "#4ade80",
-              "&:hover": {
-                color: "#16a34a",
-              },
-            },
-          },
-        },
-        colors: {
-          background: "hsl(var(--background))",
-          foreground: "hsl(var(--foreground))",
-          card: {
-            DEFAULT: "hsl(var(--card))",
-            foreground: "hsl(var(--card-foreground))",
-          },
-          popover: {
-            DEFAULT: "hsl(var(--popover))",
-            foreground: "hsl(var(--popover-foreground))",
-          },
-          primary: {
-            DEFAULT: "hsl(var(--primary))",
-            foreground: "hsl(var(--primary-foreground))",
-          },
-          secondary: {
-            DEFAULT: "hsl(var(--secondary))",
-            foreground: "hsl(var(--secondary-foreground))",
-          },
-          muted: {
-            DEFAULT: "hsl(var(--muted))",
-            foreground: "hsl(var(--muted-foreground))",
-          },
-          accent: {
-            DEFAULT: "hsl(var(--accent))",
-            foreground: "hsl(var(--accent-foreground))",
-          },
-          destructive: {
-            DEFAULT: "hsl(var(--destructive))",
-            foreground: "hsl(var(--destructive-foreground))",
-          },
-          border: "hsl(var(--border))",
-          input: "hsl(var(--input))",
-          ring: "hsl(var(--ring))",
-          chart: {
-            "1": "hsl(var(--chart-1))",
-            "2": "hsl(var(--chart-2))",
-            "3": "hsl(var(--chart-3))",
-            "4": "hsl(var(--chart-4))",
-            "5": "hsl(var(--chart-5))",
-          },
-        },
-        borderRadius: {
-          lg: "var(--radius)",
-          md: "calc(var(--radius) - 2px)",
-          sm: "calc(var(--radius) - 4px)",
-        },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       animation: {
         "border-travel": "border-travel 4s linear infinite",
@@ -107,9 +91,23 @@ const config: Config = {
           "50%": { transform: "translateY(-5px)" },
         },
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            color: "#4ade80",
+            a: {
+              color: "#4ade80",
+              "&:hover": {
+                color: "#16a34a",
+              },
+            },
+          },
+        },
+      },
     },
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    plugins: [require("tailwindcss-animate")],
   },
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 };
+
 export default config;

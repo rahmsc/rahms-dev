@@ -43,6 +43,8 @@
     --chart-4: 43 74% 66%;
 
     --chart-5: 27 87% 67%;
+
+    --font-source-code-pro: "Source Code Pro", monospace;
   }
 
   .dark {
@@ -83,15 +85,16 @@
 
 @layer base {
   * {
+    font-family: var(--font-source-code-pro) !important;
     /* @apply border-border; */
   }
   body {
-    /* @apply bg-background text-foreground; */
+    font-family: var(--font-source-code-pro) !important;
   }
 }
 
 .font-source-code-pro {
-  font-family: var(--font-source-code-pro), monospace;
+  font-family: var(--font-source-code-pro) !important;
 }
 
 .bg-paper {
@@ -105,4 +108,8 @@
   background-color: #1a1a1a;
   background-image: linear-gradient(#2a2a2a 1px, transparent 1px),
     linear-gradient(90deg, #2a2a2a 1px, transparent 1px);
+}
+
+.preserve-whitespace {
+  white-space: pre-wrap; /* Preserves whitespace and wraps text */
 }

@@ -4,7 +4,7 @@ import { ThemeToggle } from "@/components/blog-components/theme-toggle";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-paper dark:bg-dark-paper transition-colors duration-300 ease-in-out">
+    <div className="min-h-screen bg-paper dark:bg-dark-paper transition-colors duration-300 ease-in-out font-sourceCodePro">
       <Header />
       <main className="container mx-auto px-4 py-4">
         <div className="flex justify-end mb-4">

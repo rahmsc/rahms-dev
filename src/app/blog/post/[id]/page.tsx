@@ -1,9 +1,11 @@
 import { getPostById } from "@/hook/getPostById";
 import { formatDate } from "@/lib/formatDate";
 import Image from "next/image";
-import { PortableText, type PortableTextBlock } from "@portabletext/react";
+
 import { notFound } from "next/navigation";
 import type { Tag } from "@/utils/Interface";
+import { PortableTextComponent } from "@/components/blog-components/PortableText";
+
 interface PostPageProps {
   params: {
     id: string; // Changed from _id to id to match the folder structure
@@ -17,15 +19,14 @@ export default async function PostPage({ params }: PostPageProps) {
 
   try {
     const post = await getPostById(params.id);
-
     if (!post) {
       notFound();
     }
-
+    console.log("Post in PostPage:", post?.body);
     return (
       <div className="min-h-screen bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:14px_24px]">
         <main className="max-w-3xl mx-auto px-4 py-8 bg-white dark:bg-gray-900">
-          <div className="space-y-8">
+          <article className="space-y-8">
             {/* Header */}
             <div className="space-y-4">
               <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
@@ -62,9 +63,14 @@ export default async function PostPage({ params }: PostPageProps) {
 
             {/* Content */}
             <div className="prose dark:prose-invert max-w-none">
-              <PortableText value={post.body as unknown as PortableTextBlock} />
+              {post.excerpt && (
+                <p className="text-md text-gray-600 dark:text-gray-400 mb-8 font-medium italic">
+                  {post.excerpt}
+                </p>
+              )}
+              <PortableTextComponent value={post.body} />
             </div>
-          </div>
+          </article>
         </main>
       </div>
     );

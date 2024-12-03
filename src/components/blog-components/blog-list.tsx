@@ -16,6 +16,7 @@ export function BlogList() {
       try {
         console.log("Fetching posts...");
         const posts = await getPosts();
+        console.log(posts);
         setPosts(posts);
       } catch (error) {
         console.error("Error fetching posts:", error);

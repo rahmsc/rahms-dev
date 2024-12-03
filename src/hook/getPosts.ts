@@ -7,6 +7,7 @@ export async function getPosts() {
     slug,
     publishedAt,
     excerpt,
+    body,
     "tags": tags[]-> {
       name,
       "slug": slug.current

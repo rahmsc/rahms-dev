@@ -20,6 +20,7 @@ interface BlogCardProps {
 }
 
 export function BlogCard({ post }: BlogCardProps) {
+  console.log("Post in BlogCard:", post);
   return (
     <Link href={`blog/post/${post._id}`} className="block group">
       <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm transition-all duration-300 hover:shadow-md border border-gray-100 dark:border-gray-700 group-hover:border-gray-200 dark:group-hover:border-gray-600">
@@ -31,6 +32,7 @@ export function BlogCard({ post }: BlogCardProps) {
                 alt={post.title}
                 width={300}
                 height={200}
+                priority
                 className="rounded-lg object-cover w-full h-48 transition-transform duration-300 group-hover:scale-105"
               />
             </div>
@@ -40,13 +42,13 @@ export function BlogCard({ post }: BlogCardProps) {
               <h2 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
                 {post.title}
               </h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-4 font-source-code-pro line-clamp-2">
+              <p className="text-gray-600 dark:text-gray-300 mb-4 font-source-code-pro line-clamp-2 preserve-whitespace">
                 {post.excerpt}
               </p>
             </div>
             <div className="flex justify-between items-center">
               <div className="flex flex-wrap gap-2">
-                {post.tags?.map((tag) => {
+                {post.tags?.map((tag, index) => {
                   const tagName =
                     typeof tag === "string"
                       ? tag
@@ -58,7 +60,7 @@ export function BlogCard({ post }: BlogCardProps) {
 
                   return (
                     <span
-                      key={`${post._id}-tag-${tag}`}
+                      key={`${post._id}-tag-${index}-${tagName}`}
                       className="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-3 py-1 rounded-full text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200"
                     >
                       {tagName}

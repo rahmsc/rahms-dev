@@ -4,9 +4,12 @@ import { ThemeProvider } from "@/components/blog-components/theme-provider";
 
 const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],
-  display: "swap",
+  display: "block",
   weight: ["400", "700"],
   variable: "--font-source-code-pro",
+  fallback: ["monospace"],
+  preload: true,
+  adjustFontFallback: true,
 });
 
 export const metadata = {
@@ -21,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={` ${sourceCodePro.variable} font-sourceCodePro`}>
+      <body className={`${sourceCodePro.className} ${sourceCodePro.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>
