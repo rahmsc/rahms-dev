@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Ensure assets are served correctly regardless of domain
+  assetPrefix: process.env.NODE_ENV === "production" ? "/_next" : "",
+
+  // Configure images to work with subdomains and remote patterns
   images: {
+    domains: ["rahms.dev", "blog.rahms.dev", "solvr.rahms.dev"],
     remotePatterns: [
       {
         protocol: "https",
@@ -9,10 +14,11 @@ const nextConfig = {
       },
     ],
   },
+
+  // Update rewrites to preserve query parameters and handle paths correctly
   async rewrites() {
     return {
       beforeFiles: [
-        // Handle subdomain routing
         {
           source: "/:path*",
           has: [
