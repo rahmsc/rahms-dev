@@ -1,4 +1,4 @@
-import type { Rule } from "sanity";
+import { Rule } from "@sanity/types";
 
 export const post = {
   name: "post",
@@ -62,7 +62,8 @@ export const post = {
           type: "string",
           title: "Alternative Text",
           description: "Important for SEO and accessibility.",
-          validation: (Rule) => Rule.required().error("Alt text is required"),
+          validation: (Rule: Rule) =>
+            Rule.required().error("Alt text is required"),
         },
       ],
     },
