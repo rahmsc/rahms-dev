@@ -1,8 +1,7 @@
 import "./blog.css";
-import { Inter, Source_Code_Pro } from "next/font/google";
+import { Source_Code_Pro } from "next/font/google";
 import { ThemeProvider } from "@/components/blog-components/theme-provider";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],
   variable: "--font-source-code-pro",
@@ -20,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${sourceCodePro.variable} font-sans`}>
+      <body className={` ${sourceCodePro.variable} font-sourceCodePro`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>

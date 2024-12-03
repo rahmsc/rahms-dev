@@ -13,6 +13,7 @@ const config: Config = {
         // mono: ['"Source Code Pro"', "monospace"],
         heading: ["var(--font-poppins)"],
         body: ["var(--font-roboto-mono)"],
+        sourceCodePro: ["var(--font-source-code-pro)"],
       },
       colors: {
         "cyber-blue": "#00F0FF",
