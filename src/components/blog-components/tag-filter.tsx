@@ -5,7 +5,7 @@ interface TagFilterProps {
   selectedTag: string | null;
 }
 
-const tags = ["tech", "web", "design", "ux", "ai"];
+const tags = ["ai", "learn"];
 
 export function TagFilter({ onSelectTag, selectedTag }: TagFilterProps) {
   return (
