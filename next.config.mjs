@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Ensure assets are served correctly regardless of domain
-  assetPrefix: process.env.NODE_ENV === "production" ? "/_next" : "",
+  assetPrefix: process.env.NODE_ENV === "production" ? "" : "",
 
   // Configure images to work with subdomains and remote patterns
   images: {
@@ -14,19 +14,19 @@ const nextConfig = {
       },
     ],
   },
-  async headers() {
-    return [
-      {
-        source: "/:path*",
-        headers: [
-          {
-            key: "Access-Control-Allow-Origin",
-            value: "*",
-          },
-        ],
-      },
-    ];
-  },
+  // async headers() {
+  //   return [
+  //     {
+  //       source: "/:path*",
+  //       headers: [
+  //         {
+  //           key: "Access-Control-Allow-Origin",
+  //           value: "*",
+  //         },
+  //       ],
+  //     },
+  //   ];
+  // },
 
   // Update rewrites to preserve query parameters and handle paths correctly
   // async rewrites() {
