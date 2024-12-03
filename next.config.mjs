@@ -29,32 +29,32 @@ const nextConfig = {
   },
 
   // Update rewrites to preserve query parameters and handle paths correctly
-  async rewrites() {
-    return {
-      beforeFiles: [
-        {
-          source: "/:path*",
-          has: [
-            {
-              type: "host",
-              value: "blog.rahms.dev",
-            },
-          ],
-          destination: "/blog/:path*",
-        },
-        {
-          source: "/:path*",
-          has: [
-            {
-              type: "host",
-              value: "solvr.rahms.dev",
-            },
-          ],
-          destination: "/solvr/:path*",
-        },
-      ],
-    };
-  },
+  // async rewrites() {
+  //   return {
+  //     beforeFiles: [
+  //       {
+  //         source: "/:path*",
+  //         has: [
+  //           {
+  //             type: "host",
+  //             value: "blog.rahms.dev",
+  //           },
+  //         ],
+  //         destination: "/blog/:path*",
+  //       },
+  //       {
+  //         source: "/:path*",
+  //         has: [
+  //           {
+  //             type: "host",
+  //             value: "solvr.rahms.dev",
+  //           },
+  //         ],
+  //         destination: "/solvr/:path*",
+  //       },
+  //     ],
+  //   };
+  // },
 };
 
 export default nextConfig;
