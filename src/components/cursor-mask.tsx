@@ -26,7 +26,7 @@ export default function MaskCursor() {
       {/* Base layer navigation tabs - removed mix-blend-difference from parent */}
       <div className="absolute top-8 left-0 right-0 flex justify-center gap-6 z-10">
         <a
-          href="https://blog.rahms.dev"
+          href="/blog"
           className="px-6 py-2 text-[#a3a3a3] border-2 border-[#a3a3a3] rounded-full hover:text-[#ff4d4d] hover:border-[#ff4d4d] transition-all duration-300 hover:-translate-y-1 hover:scale-110 font-bold origin-center"
           tabIndex={0}
           aria-label="Visit Blog"
@@ -34,7 +34,7 @@ export default function MaskCursor() {
           blog
         </a>
         <a
-          href="https://product.rahms.dev"
+          href="/solvr"
           className="px-6 py-2 text-[#a3a3a3] border-2 border-[#a3a3a3] rounded-full hover:text-[#ff4d4d] hover:border-[#ff4d4d] transition-all duration-300 hover:-translate-y-1 hover:scale-110 font-bold origin-center"
           tabIndex={0}
           aria-label="Visit Product"

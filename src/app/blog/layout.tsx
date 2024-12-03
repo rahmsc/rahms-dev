@@ -1,9 +1,16 @@
 import "./blog.css";
-import type { Metadata } from "next";
-import { robotoMono } from "../product/fonts/fonts";
-export const metadata: Metadata = {
-  title: "Retro Terminal Blog",
-  description: "An old-school computer text-based blog",
+import { Inter, Source_Code_Pro } from "next/font/google";
+import { ThemeProvider } from "@/components/blog-components/theme-provider";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const sourceCodePro = Source_Code_Pro({
+  subsets: ["latin"],
+  variable: "--font-source-code-pro",
+});
+
+export const metadata = {
+  title: "My Blog",
+  description: "A blog frontend for my CMS",
 };
 
 export default function RootLayout({
@@ -12,17 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        {/* <link
-          href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap"
-          rel="stylesheet"
-        /> */}
-      </head>
-      <body
-        className={`bg-black text-green-400 ${robotoMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.variable} ${sourceCodePro.variable} font-sans`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
