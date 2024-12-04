@@ -20,12 +20,11 @@ interface BlogCardProps {
 }
 
 export function BlogCard({ post }: BlogCardProps) {
-  console.log("Post in BlogCard:", post);
   return (
     <Link href={`blog/post/${post._id}`} className="block group">
-      <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm transition-all duration-300 hover:shadow-md border border-gray-100 dark:border-gray-700 group-hover:border-gray-200 dark:group-hover:border-gray-600">
-        <div className="flex flex-col md:flex-row gap-6">
-          <div className="md:w-1/3">
+      <div className="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-xl shadow-sm transition-all duration-300 hover:shadow-md border border-gray-100 dark:border-gray-700 group-hover:border-gray-200 dark:group-hover:border-gray-600">
+        <div className="flex flex-col md:flex-row gap-4 sm:gap-6">
+          <div className="hidden sm:block sm:w-full md:w-1/3">
             <div className="relative overflow-hidden rounded-lg">
               <Image
                 src={post.image}
@@ -37,16 +36,16 @@ export function BlogCard({ post }: BlogCardProps) {
               />
             </div>
           </div>
-          <div className="md:w-2/3 flex flex-col justify-between">
+          <div className="w-full md:w-2/3 flex flex-col justify-between">
             <div>
-              <h2 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+              <h2 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
                 {post.title}
               </h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-4 font-source-code-pro line-clamp-2 preserve-whitespace">
+              <p className="text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 font-source-code-pro line-clamp-2 preserve-whitespace">
                 {post.excerpt}
               </p>
             </div>
-            <div className="flex justify-between items-center">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0">
               <div className="flex flex-wrap gap-2">
                 {post.tags?.map((tag, index) => {
                   const tagName =
@@ -61,14 +60,14 @@ export function BlogCard({ post }: BlogCardProps) {
                   return (
                     <span
                       key={`${post._id}-tag-${index}-${tagName}`}
-                      className="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-3 py-1 rounded-full text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200"
+                      className="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200"
                     >
                       {tagName}
                     </span>
                   );
                 })}
               </div>
-              <span className="text-sm text-gray-500 dark:text-gray-400 font-medium">
+              <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-medium">
                 {formatDate(post.publishedAt?.toString() || "")}
               </span>
             </div>

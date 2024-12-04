@@ -42,8 +42,8 @@ export function BlogList() {
       );
 
   return (
-    <div className="mx-48">
-      <div className="flex justify-between items-center mb-6">
+    <div className="mx-4 sm:mx-8 md:mx-16 lg:mx-32 xl:mx-48">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0 mb-6">
         <TagFilter onSelectTag={setSelectedTag} selectedTag={selectedTag} />
         <button
           type="button"
