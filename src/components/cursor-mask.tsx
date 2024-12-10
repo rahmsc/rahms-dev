@@ -100,7 +100,7 @@ export default function MaskCursor() {
           WebkitMaskImage:
             "radial-gradient(circle, black 0%, black 50%, transparent 50%)",
           WebkitMaskRepeat: "no-repeat",
-          WebkitMaskSize: "440px 440px",
+          WebkitMaskSize: "550px 550px",
           WebkitMaskPosition: `${mousePosition.x - 220}px ${
             mousePosition.y - 220
           }px`,
